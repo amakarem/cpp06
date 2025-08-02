@@ -6,33 +6,33 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 14:51:07 by aelaaser          #+#    #+#             */
-/*   Updated: 2025/07/26 19:24:03 by aelaaser         ###   ########.fr       */
+/*   Updated: 2025/08/02 21:00:39 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-ScalarConverter::ScalarConverter(void)
-{
-	//std::cout << "ScalarConverter void constructor called\n";
-}
+// ScalarConverter::ScalarConverter(void)
+// {
+// 	//std::cout << "ScalarConverter void constructor called\n";
+// }
 
-ScalarConverter::~ScalarConverter()
-{
-	//std::cout << "Destructor for ScalarConverter called\n";
-}
-ScalarConverter::ScalarConverter(ScalarConverter const &cpy)
-{
-	//std::cout << "Copy constructor called\n";
-	*this = cpy;
-}
-ScalarConverter &ScalarConverter::operator=(ScalarConverter const &cpy)
-{
-	//std::cout << "Copy assignment operator called\n";
-	if (this == &cpy)
-		return (*this);
-	return (*this);
-}
+// ScalarConverter::~ScalarConverter()
+// {
+// 	//std::cout << "Destructor for ScalarConverter called\n";
+// }
+// ScalarConverter::ScalarConverter(ScalarConverter const &cpy)
+// {
+// 	//std::cout << "Copy constructor called\n";
+// 	*this = cpy;
+// }
+// ScalarConverter &ScalarConverter::operator=(ScalarConverter const &cpy)
+// {
+// 	//std::cout << "Copy assignment operator called\n";
+// 	if (this == &cpy)
+// 		return (*this);
+// 	return (*this);
+// }
 
 // const char *ScalarConverter::exceptionNotDisplayablee::what() const throw()
 // {

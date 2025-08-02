@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 14:51:02 by aelaaser          #+#    #+#             */
-/*   Updated: 2025/07/26 17:10:11 by aelaaser         ###   ########.fr       */
+/*   Updated: 2025/08/02 21:01:24 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,12 @@
 
 class ScalarConverter
 {
-	protected:
-
-	public:
+	private:
 		ScalarConverter(void);
 		~ScalarConverter();
 		ScalarConverter(const ScalarConverter &cpy);
 		ScalarConverter &operator = (ScalarConverter const &org);
+	public:
 		
 		static void	convert(const std::string& str);
 		// class exceptionNotDisplayablee : public std::exception
