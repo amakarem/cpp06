@@ -6,7 +6,7 @@
 #    By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 14:51:10 by aelaaser          #+#    #+#              #
-#    Updated: 2025/08/02 20:59:31 by aelaaser         ###   ########.fr        #
+#    Updated: 2025/08/05 16:03:29 by aelaaser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 # Source files
-SRCS = main.cpp base.cpp a.cpp b.cpp c.cpp
+SRCS = main.cpp Base.cpp A.cpp B.cpp C.cpp
 
 # Object files
 OBJS = $(SRCS:.cpp=.o)

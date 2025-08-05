@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 20:31:23 by aelaaser          #+#    #+#             */
-/*   Updated: 2025/08/02 20:56:21 by aelaaser         ###   ########.fr       */
+/*   Updated: 2025/08/05 15:44:27 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ private:
 
 public:
 	C();
-	~C();
+	virtual ~C();
 	C(const C &cpy);
 	C &operator = (C const &org);
 };

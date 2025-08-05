@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 20:29:54 by aelaaser          #+#    #+#             */
-/*   Updated: 2025/08/02 20:31:11 by aelaaser         ###   ########.fr       */
+/*   Updated: 2025/08/05 16:04:07 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 Base::~Base()
 {
-	//std::cout << "Destructor for ScalarConverter called\n";
+	std::cout << "Destructor for Base called\n";
 }
