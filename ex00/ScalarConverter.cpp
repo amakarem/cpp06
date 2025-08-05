@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 14:51:07 by aelaaser          #+#    #+#             */
-/*   Updated: 2025/08/05 15:29:20 by aelaaser         ###   ########.fr       */
+/*   Updated: 2025/08/05 18:34:55 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,26 @@
 // 	return ("Error! You entered not displaylable character!\n!");
 // }
 
+static bool	isValid(const std::string &s)
+{
+	size_t	i;
+	int		cnt;
+
+	cnt = std::count(s.begin(), s.end(), '.');
+	if (cnt > 1)
+		return (false);
+	i = 0;
+	if (s[i] == '+' || s[i] == '-')
+		i++;
+	for (; i < s.length(); i++)
+	{
+		if ((!std::isdigit(s[i]) && s[i] != '.' && s[i] != 'f') || ((i
+					+ 1) < s.length() && s[i] == 'f'))
+			return (false);
+	}
+	return (true);
+}
+
 static bool	isPseudo(const std::string &s)
 {
 	return s == "nan" || s == "nanf" ||
@@ -50,14 +70,14 @@ static bool	isDouble(const std::string &s)
 {
 	return s.find('.') != std::string::npos &&
 		s.back() != 'f' &&
-		!isPseudo(s);
+		!isPseudo(s) && isValid(s);
 }
 
 static bool	isFloat(const std::string &s)
 {
 	return s.find('.') != std::string::npos &&
 		s.back() == 'f' &&
-		!isPseudo(s);
+		!isPseudo(s) && isValid(s);
 }
 
 static bool	isInt(const std::string &s)
@@ -75,11 +95,12 @@ static bool	isInt(const std::string &s)
 	return (true);
 }
 
-static bool isChar(const std::string &s)
+static bool	isChar(const std::string &s)
 {
-    if (s.length() == 3 && s.front() == '\'' && s.back() == '\'')
-        return true;
-    return (s.length() == 1 && !std::isdigit(s[0]) && std::isprint(static_cast<unsigned char>(s[0])));
+	if (s.length() == 3 && s.front() == '\'' && s.back() == '\'')
+		return (true);
+	return (s.length() == 1 && !std::isdigit(s[0])
+		&& std::isprint(static_cast<unsigned char>(s[0])));
 }
 
 void ScalarConverter::convert(std::string const &str)
