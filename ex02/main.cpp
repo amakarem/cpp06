@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 15:45:35 by aelaaser          #+#    #+#             */
-/*   Updated: 2025/08/05 16:12:07 by aelaaser         ###   ########.fr       */
+/*   Updated: 2025/08/05 18:25:05 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,8 @@
 
 Base	*generate(void)
 {
-	static bool	seeded;
 	int			i;
 
-	seeded = false;
-	if (!seeded)
-	{
-		std::srand(static_cast<unsigned int>(std::time(nullptr)));
-		seeded = true;
-	}
 	i = std::rand() % 3;
 	switch (i)
 	{
@@ -98,7 +91,6 @@ void	identify(Base &p)
 int	main(void)
 {
 	Base	*base;
-		delete base;
 
 	for (int i = 0; i < 6; i++)
 	{
@@ -107,6 +99,7 @@ int	main(void)
 		identify(base);
 		identify(*base);
 		std::cout << "================================ " << std::endl;
+		delete base;
 	}
 	return (0);
 }
